@@ -6,7 +6,7 @@ import re
 import sys
 
 sys.path.append( "../tools/" )
-from parse_out_email_text import parseOutText
+from tools.parse_out_email_text import parseOutText
 
 """
     Starter code to process the emails from Sara and Chris to extract
@@ -44,7 +44,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         temp_counter += 1
         if temp_counter < 200:
             path = os.path.join('..', path[:-1])
-            print path
+            print (path)
             email = open(path, "r")
 
             ### use parseOutText to extract the text from the opened email
@@ -59,7 +59,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
 
             email.close()
 
-print "emails processed"
+print ("emails processed")
 from_sara.close()
 from_chris.close()
 
